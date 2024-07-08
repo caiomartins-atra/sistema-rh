@@ -5,6 +5,12 @@ st.set_page_config(
     page_icon="📊",
 )
 
+# Caminho para a logo
+logo_path = 'data/atra_logo.png'
+
+# Adiciona a logo no topo da barra lateral
+st.sidebar.image(logo_path, use_column_width=True)
+
 st.write("# Bem-vindo ao Gerenciamento de Recursos! 📊")
 
 st.sidebar.success("Selecione uma página acima.")
