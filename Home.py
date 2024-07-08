@@ -5,17 +5,6 @@ st.set_page_config(
     page_icon="📊",
 )
 
-# Caminho para a logo
-logo_path = 'data/atra_logo.png'
-
-# Adiciona a logo no topo da barra lateral com verificação
-try:
-    with open(logo_path, "rb") as image_file:
-        image = Image.open(io.BytesIO(image_file.read()))
-        st.sidebar.image(image, use_column_width=True)
-except (IOError, Image.UnidentifiedImageError) as e:
-    st.sidebar.error(f"Erro ao carregar a imagem: {e}")
-
 st.write("# Bem-vindo ao Gerenciamento de Recursos! 📊")
 
 st.sidebar.success("Selecione uma página acima.")
